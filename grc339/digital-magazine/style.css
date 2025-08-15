@@ -1,0 +1,103 @@
+/*CSS document*/
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+div.container {
+    max-width: 40em;
+    margin: auto;
+}
+
+nav {
+    margin: 1em 0.5em;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+
+nav ul li a {
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-right: 1em;
+    color: rgb(64, 98, 133);
+   
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0)
+}
+
+h1 {
+    max-width: 5.5em;
+    margin: 1em 0.5em;
+}
+
+h2 {
+    font-family: serif;
+    font-weight: bold;
+    color: rgb(64, 98, 133);
+    margin: 0.1em;
+}
+
+section.mainstory h2 {
+    font-size: 3em;
+}
+
+section.secondarystory h2 {
+    font-size: 2em;
+    margin-left: 0.25em;
+}
+
+section.tertiarystory h2 {
+    font-size: 1.2em;
+    border-top: 1.5px solid rgb(64, 98, 133);
+    margin-left: 0.5em;
+    padding-top: 0.5em;
+}
+
+article h2 {
+    font-size: 3em;
+}
+
+p {
+    font-family: sans-serif;
+    padding-bottom: 1em;
+    margin-left: 0.5em;
+    line-height: 1;
+
+}
+
+aside {
+    background-color: rgb(200, 204, 251);
+    padding: 1em 0.5em 2.5em;
+}
+
+aside h2 {
+    font-size: 1.2em;
+    margin: 0.3em;
+}
+
+aside p {
+    margin-left: 0.5em;
+}
+
+@media only screen and (min-width: 40em) {
+    h1, nav, section.mainstory h2, section.secondarystory h2, section.tertiarystory h2, article h2, figcaption, p, aside h2, aside p {
+        margin-left: 0em;
+        
+    }
+}
+
+footer {
+    background-color: rgb(64, 98, 133);
+    color: rgb(255, 255, 255);
+    padding-top: 2em;
+}
