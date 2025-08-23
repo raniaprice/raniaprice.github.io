@@ -7,20 +7,23 @@ img {
     display: block;
 }
 
-div.container {
+div.container, div.home-container {
     max-width: 40em;
     margin: auto;
 }
 
+h1 {
+    max-width: 5.5em;
+    margin: 1em 0em;
+}
+
 nav {
-    margin: 1em 0.5em;
+    margin: 1em 0.5em 0 0;
 }
 
 nav ul li {
     list-style-type: none;
-    display: inline;
 }
-
 
 nav ul li a {
     font-family: sans-serif;
@@ -35,10 +38,6 @@ a {
     color: rgb(0, 0, 0)
 }
 
-h1 {
-    max-width: 5.5em;
-    margin: 1em 0.5em;
-}
 
 h2 {
     font-family: serif;
@@ -47,37 +46,17 @@ h2 {
     margin: 0.1em;
 }
 
-section.mainstory h2 {
-    font-size: 3em;
-}
-
-section.secondarystory h2 {
-    font-size: 2em;
-    margin-left: 0.25em;
-}
-
-section.tertiarystory h2 {
-    font-size: 1.2em;
-    border-top: 1.5px solid rgb(64, 98, 133);
-    margin-left: 0.5em;
-    padding-top: 0.5em;
-}
-
-article h2 {
-    font-size: 3em;
-}
-
 p {
     font-family: sans-serif;
     padding-bottom: 1em;
     margin-left: 0.5em;
-    line-height: 1;
+    line-height: 1.2;
 
 }
 
 aside {
-    background-color: rgb(200, 204, 251);
-    padding: 1em 0.5em 2.5em;
+	background-color: rgb(204, 207, 251);
+	padding: 0em .5em;
 }
 
 aside h2 {
@@ -89,15 +68,166 @@ aside p {
     margin-left: 0.5em;
 }
 
+article h2 {
+	font-size: 2.5em;
+	margin-top: 0em;
+	margin-bottom: .3em;
+}
+
+article p {
+	margin-bottom: 1em;
+}
+
+section.main-story h2 {
+	font-size: 3em;
+
+}
+
+
+section.secondary-story h2 {
+  font-size: 1.7em;
+} 
+
+section.secondary-story p {
+	margin-bottom: 0.5em;
+}
+
+section.tertiary h2 {
+    font-size: 1.2em;
+    padding: 0.5em 0 0.2em;
+    border-top: 1.5px solid #4e70b9;
+} 
+
+section.tertiary-story h2 {
+	border-top: 1px solid rgb(136, 155, 179);
+	padding-top: .5em;
+}
+
+section.tertiary p {
+    margin-bottom: 1em;
+}
+
+section.tertiary-story p {
+	line-height: 1em;
+}
+
+figcaption {
+	font-style: italic;
+    font-size: 0.9em;
+	font-family: sans-serif;
+	margin: .5em 0 1em .3em;
+	color: rgb(96, 96, 96);
+}
+
 @media only screen and (min-width: 40em) {
-    h1, nav, section.mainstory h2, section.secondarystory h2, section.tertiarystory h2, article h2, figcaption, p, aside h2, aside p {
-        margin-left: 0em;
-        
-    }
+
+}
+nav ul li {
+	display: inline;
+	margin-right: 1em;
+}
+
+figcaption {
+	margin: .2rem 0 1em;
+}
+
+header, h2, p {
+	margin: .2rem 0 0;
+}
+
+@media only screen and (min-width: 60em) {
+    
+}
+div.home-container {
+    max-width: 80em;
+    padding: 0 1em;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1em;
+}
+
+div.container {
+max-width: 60em;
+padding: 0 1em;
+display: grid;
+grid-template-columns: 3fr 1fr;
+grid-gap: 1em;
 }
 
 footer {
-    background-color: rgb(64, 98, 133);
-    color: rgb(255, 255, 255);
-    padding-top: 2em;
+background-color: rgb(64, 98, 133);
+color: rgb(255, 255, 255);
+padding-top: 2em;
+}
+
+header, footer {
+grid-column: 1/3;
+} 
+
+div.home-container main {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 1em;
+}
+
+div.home-container aside {
+margin: 0;
+background: none;
+}
+
+section.main-story {
+    grid-column: 2/4;
+    grid-row: 1/3;
+    display: flex;
+}
+
+section.main-story a {
+    flex: 1 0 12em;
+    display: flex;
+    flex-direction: column;
+}
+
+section.main-story a figure {
+    flex: 1 0 12em;
+    display: flex;
+}
+
+section.main-story a figure img {
+    object-fit: cover;
+}
+
+section.main-story a h2 {
+    flex: 0 0 1em;
+}
+
+section.main-story a p {
+    flex: 0 0 4em;
+}
+
+
+section.secondary-story {
+    display: flex;
+}
+
+section.secondary-story a {
+    flex: 1 0 12em;
+    display: flex;
+    flex-direction: column;
+}
+
+section.secondary-story a figure {
+    flex: 1 0 12em;
+    display: flex;
+}
+
+section.secondary-story a figure img {
+    object-fit: cover;
+}
+
+section.secondary-story h2 {
+    flex: 0 0 1em;
+}
+
+section.secondary-story a p {
+    flex: 0 0 4em;
 }
